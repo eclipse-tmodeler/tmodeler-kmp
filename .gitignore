@@ -1,0 +1,50 @@
+# ---- Gradle / Kotlin ----
+.gradle/
+.kotlin/
+**/build/
+!src/**/build/
+local.properties
+shared/test*.db
+*.iml
+*.ipr
+*.iws
+hs_err_pid*.log
+.konan/
+
+# ---- Android ----
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+
+# ---- Kotlin/JS & Wasm ----
+node_modules/
+.yarn/
+
+# ---- IDE ----
+.idea/
+*.swp
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Xcode / iOS ----
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xcscmblueprint
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+*.moved-aside
+.swiftpm/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
