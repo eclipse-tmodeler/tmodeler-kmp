@@ -122,7 +122,8 @@ android {
 dependencies {
     implementation("co.tamboai:TModeler:1.0.1")
     // Optional: engines (general guide §17)
-    implementation("co.tamboai:TBridge:1.0.1")          // optional, on request (contact@tamboai.co): synchronization + Tnc
+    // Optional modules, on request (contact@tamboai.co); not on Maven Central, the build fails without access:
+    // implementation("co.tamboai:TBridge:1.0.1")       // synchronization + Tnc
     // implementation("co.tamboai:TVault:1.0.1")        // encryption
     // implementation("co.tamboai:TAi:1.0.1")           // artificial intelligence
 

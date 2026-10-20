@@ -119,7 +119,8 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("co.tamboai:TModeler:1.0.1")
-                implementation("co.tamboai:TBridge:1.0.1")          // optional, on request (contact@tamboai.co): synchronization + Tnc
+                // Optional, on request (contact@tamboai.co); not on Maven Central, the build fails without access:
+                // implementation("co.tamboai:TBridge:1.0.1")       // synchronization + Tnc
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")

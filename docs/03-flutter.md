@@ -169,8 +169,8 @@ flutter { source = "../.." }
 
 dependencies {
     implementation("co.tamboai:TModeler:1.0.1")
-    implementation("co.tamboai:TBridge:1.0.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    // Optional, on request (contact@tamboai.co); not on Maven Central, the build fails without access:
+    // implementation("co.tamboai:TBridge:1.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
