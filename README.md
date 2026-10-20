@@ -24,13 +24,15 @@ This repository is the **official Kotlin Multiplatform distribution** of TModele
 
 | Platform | Targets | Status |
 |---|---|---|
-| Android native (Kotlin / Java) | Android API 24+ | ✅ stable |
-| JVM (desktop / server) | JDK 17 / 21 | ✅ stable |
+| Android native (Kotlin / Java) | Android API 21+ | ✅ stable |
+| JVM (desktop / server) | JDK 11+ (17 / 21 recommended) | ✅ stable |
 | Web (React, Kotlin/Wasm-JS) | `wasmJs` | ✅ working |
 | Flutter | via Android bridge | ✅ working |
 | iOS | `iosArm64`, `iosSimulatorArm64`, `iosX64` | 🚧 in progress |
 
 ## Documentation
+
+> **Using an AI coding assistant?** Point it to [`AGENTS.md`](AGENTS.md) (also published as [`llms.txt`](llms.txt)): it contains everything needed to install TModeler and start implementing, step by step.
 
 Start here — the guides are self-sufficient (no need to read the source code).
 

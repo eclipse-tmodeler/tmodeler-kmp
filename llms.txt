@@ -1,0 +1,25 @@
+# TModeler
+
+> TModeler is a Kotlin Multiplatform data engine for building data-centric applications on Android, JVM and the Web (Kotlin/Wasm, React). Declare typed models once; storage, queries, files and notifications are handled for you. The UI layer contains no business logic and no SQL. Published on Maven Central under `co.tamboai`, version 1.0.1, license EPL-2.0.
+
+Start with the agent instructions: they cover platform choice, prerequisites, dependencies, initialization, a first model and verification.
+
+## Start here
+
+- [AGENTS.md](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/AGENTS.md): step-by-step instructions for AI coding assistants
+- [README](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/README.md): overview, supported platforms, quick install
+
+## Guides
+
+- [Getting started (all platforms)](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/01-tmodeler.md): philosophy, installation, models, fields, relations, CRUD, queries, TFlow, TGate, files, features, notifications, troubleshooting, quick reference
+- [Android](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/02-android.md): Gradle, Manifest, MVVM
+- [Flutter](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/03-flutter.md): Flutter to Kotlin bridge
+- [React](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/04-react.md): React + TModeler (Kotlin/Wasm), KSP registry, export contract
+- [JVM](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/05-jvm.md): desktop and server
+- [iOS](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/docs/06-ios.md): in progress
+
+## Optional
+
+- TBridge (synchronization), TVault (encryption) and TAi (AI) are optional modules available on request at contact@tamboai.co or https://tamboai.co. They are not on Maven Central.
+- [Maven Central namespace](https://central.sonatype.com/namespace/co.tamboai)
+- [CONTRIBUTING](https://raw.githubusercontent.com/eclipse-tmodeler/tmodeler-kmp/main/CONTRIBUTING.md)
