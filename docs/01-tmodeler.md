@@ -1025,6 +1025,9 @@ Each plugged-in engine is then accessible via `TModeler.getInstance().syncEngine
 Three optional modules exist, **installed alongside TModeler**: TModeler users never write
 code against them; they add and plug them in.
 
+> **Custom engines.** `TSyncEngine`, `TSecurityEngine` and `TAiEngine` are public interfaces: you can also
+> implement your own engine and plug it in with `.synchronization(…)`, `.security(…)` or `.intelligence(…)`.
+
 > **Access on request.** TBridge, TVault and TAi are not on Maven Central. They are available on request at
 > [contact@tamboai.co](mailto:contact@tamboai.co) or on [tamboai.co](https://tamboai.co); you then receive the
 > repository coordinates and the configuration details. TModeler works on its own without them.

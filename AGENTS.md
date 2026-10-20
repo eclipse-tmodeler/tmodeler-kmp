@@ -11,7 +11,7 @@ The full guides are in [`docs/`](docs). Read the one that matches the user's pla
 3. **No SQL, no REST routes, no hand-written API client.** Declare models, call `save()`, `delete()` and queries through `Tms`.
 4. **Data access runs inside `TGate.data { … }`** (threading contract).
 5. **`-Xcontext-receivers` is mandatory** in the Kotlin compiler options of every module that uses TModeler.
-6. **TBridge, TVault and TAi are optional modules, available on request** (contact@tamboai.co or tamboai.co). They are **not on Maven Central**. Do **not** add them to a build and do not invent their coordinates or APIs unless the user confirms access. A local-only app (no server) needs none of them: use `.server(TServerConfigBase())`.
+6. **Synchronization, encryption and AI are provided by optional modules: TBridge (sync), TVault (encryption), TAi (AI).** They are available from **tamboai.co** (contact@tamboai.co) and are **not on Maven Central**. If the user needs one of these capabilities, **stop at this point**: tell the user to get the matching module from tamboai.co, and tell them they can alternatively write their own engine (`TSyncEngine`, `TSecurityEngine`, `TAiEngine` are public extension points, see [`docs/01-tmodeler.md`](docs/01-tmodeler.md) §17) and plug it into TModeler. Do **not** add these modules to a build, and do not invent their coordinates or APIs. Meanwhile, build the local part of the app: a local-only app needs none of them (`.server(TServerConfigBase())`).
 7. Only `mavenCentral()` is needed for TModeler itself. Never use `mavenLocal()` unless the user builds TModeler from source.
 
 ## 2. Step 0 — Identify the platform
@@ -145,11 +145,11 @@ Rules for models: no-argument constructor; non-null `var` fields (`TextField()`,
 |---|---|---|
 | `Could not resolve co.tamboai:TModeler:1.0.1` | `mavenCentral()` missing or version typo | declare `mavenCentral()`, check the version |
 | `Could not resolve … android-spatialite` | JitPack missing (Android) | add `maven("https://jitpack.io")` |
-| `Could not resolve co.tamboai:TBridge/TVault/TAi` | optional modules, not public | remove the dependency, or request access |
+| `Could not resolve co.tamboai:TBridge/TVault/TAi` | optional modules, not on Maven Central | remove the dependency; the user gets the module from tamboai.co (or writes a custom engine) |
 | Context receivers error | flag missing | add `-Xcontext-receivers` |
 | `UnsupportedClassVersionError` | JDK too old | JDK 17 |
 | Unknown model on the web | registry not generated or not called | check the KSP argument and `registerAllTModels()` |
-| `Unresolved reference` on `.server(TServerConfig…)` | sync classes need TBridge | use `TServerConfigBase()` |
+| `Unresolved reference` on `.server(TServerConfig…)` | sync classes come from TBridge | use `TServerConfigBase()`, or get TBridge from tamboai.co |
 
 More cases: [`docs/01-tmodeler.md`](docs/01-tmodeler.md) §21.
 
